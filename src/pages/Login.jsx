@@ -32,7 +32,7 @@ export default function Login() {
         </div>
 
         <div>
-          <button className="cta">Login</button>
+          <button>Login</button>
         </div>
       </form>
     </main>

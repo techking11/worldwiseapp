@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 function PageNav() {
   return (
-    <div className={styles.nav}>
+    <nav className={styles.nav}>
       <Logo />
       <ul>
         <li>
@@ -20,7 +20,7 @@ function PageNav() {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 
