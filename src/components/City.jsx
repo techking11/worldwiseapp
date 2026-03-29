@@ -1,26 +1,24 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "./Button";
 import Spinner from "./Spinner";
 import styles from "./City.module.css";
+import { useCities } from "../context/CitiesContext";
+import { formatDate } from "../utils/helper";
+import { useEffect } from "react";
 
-const formatDate = (date) =>
-  new Intl.DateTimeFormat("en", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    weekday: "long",
-  }).format(new Date(date));
-
-function City({ cities, isLoading }) {
+function City() {
+  const { isLoading, currentCity, getCity } = useCities();
   const navigate = useNavigate();
-  const { city } = useParams();
+  const { id } = useParams();
+
+  useEffect(() => {
+    getCity(id);
+  }, [id]);
 
   if (isLoading) return <Spinner />;
-
-  const { cityName, emoji, date, notes } =
-    cities.filter((c) => c.cityName === city)[0] || {};
+  const { cityName, emoji, date, notes } = currentCity;
 
   return (
     <div className={styles.city}>

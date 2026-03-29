@@ -1,9 +1,11 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import { useCities } from "../context/CitiesContext";
 import CountryItem from "./CountryItem";
 import styles from "./CountryList.module.css";
 
-function CountryList({ cities, isLoading }) {
+function CountryList() {
+  const { cities, isLoading } = useCities();
   const countries = cities.reduce((arr, city) => {
     if (!arr.map((el) => el.country).includes(city.country)) {
       return [...arr, { country: city.country, emoji: city.emoji }];
