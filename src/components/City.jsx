@@ -1,3 +1,8 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import { useNavigate, useParams } from "react-router-dom";
+import Button from "./Button";
+import Spinner from "./Spinner";
 import styles from "./City.module.css";
 
 const formatDate = (date) =>
@@ -8,16 +13,14 @@ const formatDate = (date) =>
     weekday: "long",
   }).format(new Date(date));
 
-function City() {
-  // TEMP DATA
-  const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
-    date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
-  };
+function City({ cities, isLoading }) {
+  const navigate = useNavigate();
+  const { city } = useParams();
 
-  const { cityName, emoji, date, notes } = currentCity;
+  if (isLoading) return <Spinner />;
+
+  const { cityName, emoji, date, notes } =
+    cities.filter((c) => c.cityName === city)[0] || {};
 
   return (
     <div className={styles.city}>
@@ -52,7 +55,15 @@ function City() {
       </div>
 
       <div>
-        <ButtonBack />
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            navigate(-1);
+          }}
+          type="back"
+        >
+          &larr; Back
+        </Button>
       </div>
     </div>
   );

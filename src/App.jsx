@@ -1,15 +1,17 @@
 /* eslint-disable no-unused-vars */
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AppLayout from "./pages/AppLayout";
 import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";
 import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
-import { useEffect, useState } from "react";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
+import City from "./components/City";
 import "./index.css";
+import Form from "./components/Form";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -42,19 +44,20 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/app" element={<AppLayout />}>
-          <Route
-            index
-            element={<CityList cities={cities} isLoading={isLoading} />}
-          />
+          <Route index element={<Navigate to="cities" replace />} />
           <Route
             path="cities"
             element={<CityList cities={cities} isLoading={isLoading} />}
           />
           <Route
+            path="cities/:city"
+            element={<City cities={cities} isLoading={isLoading} />}
+          />
+          <Route
             path="countries"
             element={<CountryList cities={cities} isLoading={isLoading} />}
           />
-          <Route path="form" element={<h1>Form</h1>} />
+          <Route path="form" element={<Form />} />
         </Route>
       </Routes>
     </BrowserRouter>
