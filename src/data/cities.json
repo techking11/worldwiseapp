@@ -35,6 +35,54 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Bangkok",
+      "country": "Thailand",
+      "emoji": "🇹🇭",
+      "date": "2027-01-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 13.756331849999999,
+        "lng": 100.5017224
+      },
+      "id": 12345678
+    },
+    {
+      "cityName": "Tokyo",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2027-03-20T10:30:00.000Z",
+      "notes": "A city that never sleeps!",
+      "position": {
+        "lat": 35.6762,
+        "lng": 139.6503
+      },
+      "id": 98765432
+    },
+    {
+      "cityName": "Chiang Mai",
+      "country": "Thailand",
+      "emoji": "🇹🇭",
+      "date": "2027-04-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 18.7863,
+        "lng": 98.9861
+      },
+      "id": 11111111
+    },
+    {
+      "cityName": "Hanoi",
+      "country": "Vietnam",
+      "emoji": "🇻🇳",
+      "date": "2027-05-20T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 21.0347,
+        "lng": 105.8342
+      },
+      "id": 22222222
     }
   ]
 }
