@@ -1,5 +1,4 @@
 // eslint-disable-next-line no-unused-vars
-/* eslint-disable react/prop-types */
 import { useCities } from "../context/CitiesContext";
 import CityItem from "./CityItem";
 import styles from "./CityList.module.css";

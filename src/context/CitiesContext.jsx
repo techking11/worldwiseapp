@@ -1,5 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 // eslint-disable-next-line no-unused-vars
-/* eslint-disable react/prop-types */
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 const CitiesContext = createContext();

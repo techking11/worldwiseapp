@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "./Button";
 import Spinner from "./Spinner";
