@@ -6,7 +6,12 @@ import { useCities } from "../context/CitiesContext";
 // eslint-disable-next-line no-unused-vars
 function CityItem({ city }) {
   const { emoji, cityName, date, position, country, id } = city;
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
+
+  async function handleDelete(e) {
+    e.preventDefault();
+    await deleteCity(id);
+  }
 
   return (
     <li>
@@ -19,7 +24,9 @@ function CityItem({ city }) {
         </span>
         <h3 className={styles.name}>{cityName}</h3>
         <span className={styles.date}>{formatDate(date)}</span>
-        <button className={styles.deleteBtn}>&times;</button>
+        <button className={styles.deleteBtn} onClick={handleDelete}>
+          &times;
+        </button>
       </Link>
     </li>
   );
