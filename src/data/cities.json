@@ -1,42 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "I want to go back!",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
       "cityName": "Bangkok",
       "country": "Thailand",
       "emoji": "🇹🇭",
@@ -61,18 +25,6 @@
       "id": 98765432
     },
     {
-      "cityName": "Al Khaburah",
-      "country": "Oman",
-      "emoji": "🇴🇲",
-      "date": "2026-04-05T06:25:42.373Z",
-      "notes": "Nice Mountains",
-      "position": {
-        "lat": "23.634456848008806",
-        "lng": "56.9671143313383"
-      },
-      "id": 1775370358328
-    },
-    {
       "cityName": "Toungup",
       "country": "Myanmar",
       "emoji": "🇲🇲",
@@ -83,6 +35,30 @@
         "lng": "94.07143268287057"
       },
       "id": 1775370822795
+    },
+    {
+      "cityName": "Bayinguoleng Menggu Zizhizhou",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2026-04-05T08:50:42.655Z",
+      "notes": "Fried foods",
+      "position": {
+        "lat": "41.44197249793744",
+        "lng": "87.11860423687797"
+      },
+      "id": 1775379053305
+    },
+    {
+      "cityName": "San Pascual",
+      "country": "Philippines (the)",
+      "emoji": "🇵🇭",
+      "date": "2026-04-05T08:51:11.864Z",
+      "notes": "Haha",
+      "position": {
+        "lat": "13.241159657116585",
+        "lng": "122.99639429540728"
+      },
+      "id": 1775379077481
     }
   ]
 }
