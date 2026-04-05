@@ -8,11 +8,12 @@ function CountryList() {
 
   if (isLoading) return <Spinner />;
 
-  const countries = cities.reduce((arr, city) => {
-    if (!arr.map((el) => el.country).includes(city.country)) {
-      return [...arr, { country: city.country, emoji: city.emoji }];
+  const countries = cities.reduce((acc, city) => {
+    const countryExists = acc.find((c) => c.country === city.country);
+    if (!countryExists) {
+      acc.push({ country: city.country, emoji: city.emoji });
     }
-    return arr;
+    return acc;
   }, []);
 
   return (

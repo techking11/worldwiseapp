@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Button from "./Button";
 import Spinner from "./Spinner";
 import styles from "./City.module.css";
@@ -41,13 +41,13 @@ function City() {
 
       <div className={styles.row}>
         <h6>Learn more</h6>
-        <a
-          href={`https://en.wikipedia.org/wiki/${cityName}`}
+        <Link
+          to={`https://en.wikipedia.org/wiki/${cityName}`}
           target="_blank"
           rel="noreferrer"
         >
           Check out {cityName} on Wikipedia &rarr;
-        </a>
+        </Link>
       </div>
 
       <div>

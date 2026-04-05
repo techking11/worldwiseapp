@@ -5,7 +5,7 @@ import { useCities } from "../context/CitiesContext";
 
 // eslint-disable-next-line no-unused-vars
 function CityItem({ city }) {
-  const { emoji, cityName, date, position, id } = city;
+  const { emoji, cityName, date, position, country, id } = city;
   const { currentCity } = useCities();
 
   return (
@@ -14,7 +14,9 @@ function CityItem({ city }) {
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
         className={`${styles.cityItem} ${currentCity.id === id ? styles["cityItem--active"] : ""}`}
       >
-        <span className={styles.emoji}>{emoji}</span>
+        <span title={country} className={styles.emoji}>
+          {emoji}
+        </span>
         <h3 className={styles.name}>{cityName}</h3>
         <span className={styles.date}>{formatDate(date)}</span>
         <button className={styles.deleteBtn}>&times;</button>
